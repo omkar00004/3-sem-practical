@@ -1,0 +1,50 @@
+
+
+def partition(arr,s ,e):
+    pivot=arr[s]
+    cnt=0
+    for i in range(s+1,e):
+        if arr[i]<=pivot:
+            cnt=cnt+1
+      
+    #  Place pivot in right position
+    pivotIndex=s+cnt
+    arr[pivotIndex],arr[s]= arr[pivotIndex],arr[s]
+    
+    i=s
+    j=e
+    
+    while i<=pivot and j>=pivot:
+        while arr[i]<=pivot:
+            i+=1
+        while arr[j]>=pivot:
+            j+=1
+        if i<pivot and j>pivot:
+            arr[i], arr[j]=arr[j], arr[i]
+            
+    return pivotIndex
+
+def quickSort(arr, s, e):
+    # Base case
+    if(s>=e):
+        return
+    
+    # partition
+    p=partition(arr,s,e)
+    
+    # left
+    quickSort(arr,s,p-1)
+    
+    # right
+    quickSort(arr,p+1,e)
+    
+
+list=[2,4,1,6,9 ,9,9,9,9,9]
+n=len(list)
+
+quickSort(list,0,n-1)
+
+    
+    
+    
+    

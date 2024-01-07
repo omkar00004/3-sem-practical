@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/omkargadakh/Documents/#Omkar 3rd Semister/code/fds_code",
+      "program": "/Users/omkargadakh/Documents/#Omkar 3rd Semister/code/fds_code/build/Debug/outDebug"
+    }
+  ]
+}
